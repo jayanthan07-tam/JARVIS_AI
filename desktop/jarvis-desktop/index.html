@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07121d" />
+    <meta name="description" content="Securely connect J.A.R.V.I.S. AI Desktop to your server." />
+    <title>J.A.R.V.I.S. AI</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="card" aria-labelledby="title">
+        <div class="brand-mark" aria-hidden="true"><span></span></div>
+        <p class="eyebrow">SECURE DESKTOP CONNECTION</p>
+        <h1 id="title">J.A.R.V.I.S. <span>AI</span></h1>
+        <p class="intro">Connect this app to your J.A.R.V.I.S. server. Your AI providers and chat data stay on that server.</p>
+
+        <form id="connection-form" novalidate>
+          <label for="server-origin">Server HTTPS address</label>
+          <div class="input-row">
+            <input
+              id="server-origin"
+              name="server-origin"
+              type="url"
+              inputmode="url"
+              autocomplete="url"
+              placeholder="https://jarvis.example.com"
+              spellcheck="false"
+              required
+            />
+            <button id="connect-button" type="submit">Connect</button>
+          </div>
+          <p id="status" class="status" role="status" aria-live="polite">A secure server address is required to use chat and AI.</p>
+        </form>
+
+        <div class="privacy-note">
+          <span class="lock" aria-hidden="true">●</span>
+          <p>Use the HTTPS address of your deployed J.A.R.V.I.S. server. Do not enter API keys or passwords here.</p>
+        </div>
+        <p class="footer">J.A.R.V.I.S. Desktop · Native application shell</p>
+      </div>
+    </main>
+  </body>
+</html>

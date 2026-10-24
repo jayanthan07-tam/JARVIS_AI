@@ -1,0 +1,43 @@
+/* Design tokens taken from the approved Stitch "JARVIS Holographic HUD" DESIGN.md. */
+:root {
+  --c-bg: #000000;
+  --c-abyss: #030712;
+  --c-surface: #0e131f;
+  --c-surface-low: #161c28;
+  --c-surface-high: #242a36;
+  --c-on-surface: #dde2f3;
+  --c-on-variant: #b9cacb;
+  --c-outline: #849495;
+  --c-outline-variant: #3b494b;
+
+  --c-primary: #00f0ff;        /* electric cyan: active emission */
+  --c-primary-soft: #dbfcff;
+  --c-secondary: #38bdf8;      /* ice blue: hover, telemetry */
+  --c-tertiary: #0ea5e9;       /* deep sky: passive wireframes */
+  --c-white: #f8fafc;          /* arc white: maximum-contrast labels */
+
+  --c-warning: #fbbf24;
+  --c-error: #ffb4ab;
+  --c-error-strong: #ff4d6d;
+  --c-ok: #00f0ff;
+
+  --glass: rgba(4, 19, 34, 0.65);
+  --glass-input: rgba(2, 10, 20, 0.85);
+  --border-hud: rgba(0, 240, 255, 0.25);
+  --border-soft: rgba(0, 240, 255, 0.1);
+  --glow-outer: 0 0 15px rgba(0, 240, 255, 0.12), inset 0 0 15px rgba(0, 240, 255, 0.05);
+  --glow-lock: 0 0 25px rgba(0, 240, 255, 0.4), inset 0 0 10px rgba(0, 240, 255, 0.2);
+
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --gutter: 1.5rem;
+  --margin: 2.5rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+
+  --header-h: 64px;
+  --bottom-nav-h: 64px;
+}

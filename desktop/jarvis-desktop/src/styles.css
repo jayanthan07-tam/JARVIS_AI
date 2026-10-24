@@ -1,0 +1,168 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: #e5f2fa;
+  background: #050c14;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  --cyan: #55e1ef;
+  --muted: #93aabb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% 25%, rgb(23 77 99 / 27%), transparent 42%),
+    linear-gradient(145deg, #08131f 0%, #050a11 68%, #071321 100%);
+}
+
+.shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 32px 20px;
+}
+
+.card {
+  width: min(100%, 560px);
+  padding: clamp(28px, 6vw, 52px);
+  border: 1px solid rgb(85 225 239 / 21%);
+  border-radius: 20px;
+  background: linear-gradient(155deg, rgb(12 27 40 / 96%), rgb(7 17 27 / 97%));
+  box-shadow: 0 32px 100px rgb(0 0 0 / 46%), inset 0 1px 0 rgb(255 255 255 / 3%);
+}
+
+.brand-mark {
+  position: relative;
+  display: grid;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 30px;
+  place-items: center;
+  border: 1px solid rgb(85 225 239 / 70%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(85 225 239 / 20%), transparent 65%);
+  box-shadow: 0 0 26px rgb(33 200 231 / 19%), inset 0 0 18px rgb(33 200 231 / 13%);
+}
+
+.brand-mark::before,
+.brand-mark::after,
+.brand-mark span {
+  position: absolute;
+  display: block;
+  content: "";
+  border: 1px solid var(--cyan);
+  border-radius: 50%;
+}
+
+.brand-mark::before { width: 30px; height: 30px; opacity: .9; }
+.brand-mark::after { width: 42px; height: 18px; transform: rotate(-36deg); opacity: .65; }
+.brand-mark span { width: 10px; height: 10px; background: var(--cyan); box-shadow: 0 0 14px var(--cyan); }
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .2em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(30px, 7vw, 42px);
+  font-weight: 650;
+  letter-spacing: .015em;
+}
+
+h1 span { color: var(--cyan); }
+
+.intro {
+  margin: 16px 0 32px;
+  color: #afc0ce;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+label {
+  display: block;
+  margin-bottom: 9px;
+  color: #d7e8f2;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.input-row { display: flex; gap: 10px; }
+
+input {
+  min-width: 0;
+  flex: 1;
+  padding: 13px 14px;
+  border: 1px solid #294052;
+  border-radius: 9px;
+  outline: 0;
+  background: #07111b;
+  color: #f3fbff;
+  font: inherit;
+  font-size: 14px;
+}
+
+input::placeholder { color: #607789; }
+input:focus-visible { border-color: var(--cyan); box-shadow: 0 0 0 3px rgb(85 225 239 / 13%); }
+
+button {
+  min-width: 104px;
+  padding: 12px 17px;
+  border: 1px solid #80f0f5;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #79edf1, #43c9dd);
+  color: #05202c;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+button:hover:not(:disabled) { filter: brightness(1.08); }
+button:focus-visible { outline: 3px solid rgb(85 225 239 / 42%); outline-offset: 3px; }
+button:disabled { cursor: progress; opacity: .65; }
+
+.status {
+  min-height: 22px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.status[data-state="error"] { color: #ffb5aa; }
+
+.privacy-note {
+  display: flex;
+  gap: 11px;
+  margin-top: 26px;
+  padding: 14px;
+  border: 1px solid rgb(85 225 239 / 14%);
+  border-radius: 10px;
+  background: rgb(6 20 30 / 72%);
+}
+
+.lock { margin-top: 2px; color: var(--cyan); font-size: 11px; }
+.privacy-note p { margin: 0; color: #9fb4c3; font-size: 12px; line-height: 1.6; }
+.footer { margin: 24px 0 0; color: #647c8d; font-size: 11px; }
+
+@media (max-width: 420px) {
+  .input-row { flex-direction: column; }
+  button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

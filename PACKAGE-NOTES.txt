@@ -1,0 +1,7 @@
+J.A.R.V.I.S. AI project package
+
+Includes the project source, Android Studio project, desktop shell, Unreal project sources, and the debug APKs in native-builds/.
+
+The APKs are debug builds. Physical-device installation was not verified in this package session. The app needs a deployed HTTPS J.A.R.V.I.S. backend for remote AI features; configure it using the documented environment-variable setup before use.
+
+Local credentials, environment files other than .env.example, local chat databases, generated build outputs, and dependency caches are excluded.

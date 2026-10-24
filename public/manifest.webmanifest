@@ -1,0 +1,49 @@
+{
+  "name": "J.A.R.V.I.S. AI Tactical Interface",
+  "short_name": "JARVIS AI",
+  "description": "Iron Man-inspired tactical holographic interface with on-device local AI and high-performance 90-120 FPS 3D engine",
+  "id": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "window-controls-overlay"],
+  "background_color": "#010810",
+  "theme_color": "#000e1a",
+  "orientation": "any",
+  "categories": ["utilities", "productivity", "entertainment"],
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "AI Tactical Chat",
+      "short_name": "Chat",
+      "description": "Direct link to JARVIS AI chat console",
+      "url": "/?screen=chat",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Voice Activation",
+      "short_name": "Voice",
+      "description": "Direct voice neural interface",
+      "url": "/?screen=voice",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}

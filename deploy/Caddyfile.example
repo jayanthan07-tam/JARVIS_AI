@@ -1,0 +1,13 @@
+# Replace jarvis.example.com with a domain whose DNS points to this machine.
+# Caddy obtains and renews the HTTPS certificate automatically.
+jarvis.example.com {
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(self), microphone=(self), geolocation=()"
+	}
+	reverse_proxy 127.0.0.1:3000
+}
